@@ -13,6 +13,8 @@ function getWow(){
         audio.play();
         const owenHead=getHead()
         document.querySelector('#owenHead').src=owenHead
+        const moviePoster=data[0].poster
+        displayPoster(moviePoster)
       })
       .catch(err => {
           console.log(`error ${err}`)
@@ -38,4 +40,12 @@ function getHead(){
     } else {
         return "img/Owen7.jpg"
     }
+}
+
+function displayPoster(movie) {
+    let posterToShow=document.querySelector('.hidden')
+    let posterToHide=document.querySelector('.moviePoster:not(.hidden)')
+    posterToShow.src=movie
+    posterToShow.classList.remove('hidden')
+    posterToHide.classList.add('hidden')
 }
