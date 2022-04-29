@@ -26,6 +26,9 @@ img {
 .hidden {
   display: none;
 }
+.lookLeft {
+  transform: scaleX(-1);
+}
 
 /******************************************
 /* LAYOUT

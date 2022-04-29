@@ -15,6 +15,7 @@ function getWow(){
         document.querySelector('#owenHead').src=owenHead
         const moviePoster=data[0].poster
         displayPoster(moviePoster)
+        lookAtPoster()
       })
       .catch(err => {
           console.log(`error ${err}`)
@@ -48,4 +49,14 @@ function displayPoster(movie) {
     posterToShow.src=movie
     posterToShow.classList.remove('hidden')
     posterToHide.classList.add('hidden')
+}
+
+function lookAtPoster(){
+    let head=document.querySelector('#owenHead').classList
+    console.log(head)
+    if (head==''){
+        head.add('lookLeft')
+    } else {
+        head.remove('lookLeft')
+    }
 }
