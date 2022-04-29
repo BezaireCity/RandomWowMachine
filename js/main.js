@@ -48,11 +48,13 @@ function displayPoster(movie) {
     let posterToHide=document.querySelector('.moviePoster:not(.hidden)')
     posterToShow.src=movie
     posterToShow.classList.remove('hidden')
+    posterToShow.classList.remove('smallImg')
     posterToHide.classList.add('hidden')
 }
 
 function lookAtPoster(){
     let head=document.querySelector('#owenHead').classList
+    head.remove('smallImg')
     console.log(head)
     if (head==''){
         head.add('lookLeft')
